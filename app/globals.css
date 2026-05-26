@@ -12,6 +12,30 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@theme {
+  --color-surface: #051424;
+  --color-surface-dim: #051424;
+  --color-surface-container: #122131;
+  --color-surface-container-low: #0d1c2d;
+  --color-surface-container-high: #1c2b3c;
+  --color-on-surface: #d4e4fa;
+  --color-on-surface-variant: #c6c6cd;
+  --color-on-background: #d4e4fa;
+  --color-primary: #4ae176;
+  --color-on-primary: #003915;
+  --color-primary-container: #0f172a;
+  --color-on-primary-container: #798098;
+  --color-primary-fixed: #6bff8f;
+  --color-on-primary-fixed: #002109;
+  --color-on-primary-fixed-variant: #005321;
+  --color-outline: #909097;
+  --color-outline-variant: #45464d;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -23,4 +47,45 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes fade-in-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-landing-card {
+  animation: fade-in-slide 700ms ease-out forwards;
+}
+
+@keyframes fade-in-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-login-card {
+  animation: fade-in-zoom 700ms ease-out forwards;
+}
+
+@keyframes float-particle {
+  from {
+    transform: translate(0, 0);
+    opacity: 0.2;
+  }
+  to {
+    transform: translate(20px, -20px);
+    opacity: 0.5;
+  }
 }
