@@ -12,10 +12,10 @@ const LOGO_URL =
 
 export default function LandingPage() {
   return (
-    <>
+    <div className="flex h-dvh w-full flex-col overflow-hidden bg-surface">
       <Navbar />
       <main
-        className="flex flex-1 items-center pt-20 relative overflow-hidden"
+        className="relative min-h-0 flex-1 overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(to right, rgba(5, 20, 36, 0.9) 0%, rgba(5, 20, 36, 0.2) 100%), url('${HERO_BG_IMAGE}')`,
           backgroundSize: "cover",
@@ -25,10 +25,10 @@ export default function LandingPage() {
         <div className="pointer-events-none absolute top-1/4 right-1/4 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
         <div className="pointer-events-none absolute bottom-1/4 left-1/2 h-64 w-64 rounded-full bg-primary/10 blur-[100px]" />
 
-        <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-center px-4 md:flex-row md:px-12">
-          <div className="w-full md:w-5/12 lg:w-4/12">
-            <div className="animate-landing-card space-y-8 rounded-xl border border-outline-variant/20 bg-surface/70 p-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] backdrop-blur-2xl md:p-10">
-              <div className="space-y-4">
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] flex-col items-center px-3 py-3 sm:px-4 md:flex-row md:px-12 md:py-6">
+          <div className="w-full max-w-md md:w-5/12 md:max-w-none lg:w-4/12">
+            <div className="animate-landing-card space-y-4 rounded-xl border border-outline-variant/20 bg-surface/70 p-4 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] backdrop-blur-2xl sm:p-5 md:space-y-8 md:p-10">
+              <div className="space-y-2 md:space-y-4">
                 <Image
                   alt="SOLAR CRM Logo"
                   src={LOGO_URL}
@@ -37,10 +37,10 @@ export default function LandingPage() {
                   className="h-12 w-auto object-contain"
                 />
                 <div>
-                  <h1 className="text-3xl font-semibold text-on-surface">
+                  <h1 className="text-xl font-semibold text-on-surface sm:text-2xl md:text-3xl">
                     Join Solar CRM
                   </h1>
-                  <p className="mt-2 text-base text-on-surface-variant">
+                  <p className="mt-1 text-sm text-on-surface-variant md:mt-2 md:text-base">
                     Empower your energy sales pipeline with radiating
                     intelligence.
                   </p>
@@ -49,8 +49,8 @@ export default function LandingPage() {
 
               <SignupForm />
 
-              <div className="space-y-6">
-                <p className="text-center text-base text-on-surface-variant">
+              <div className="space-y-3 md:space-y-6">
+                <p className="text-center text-sm text-on-surface-variant md:text-base">
                   Already have an account?{" "}
                     <a
                       href="/login"
@@ -59,7 +59,7 @@ export default function LandingPage() {
                     Log In
                   </a>
                 </p>
-                <p className="px-4 text-center text-xs leading-relaxed text-outline-variant">
+                <p className="hidden px-2 text-center text-[11px] leading-relaxed text-outline-variant sm:block md:px-4 md:text-xs">
                   By signing up, you agree to our{" "}
                   <a
                     href="#"
@@ -84,6 +84,6 @@ export default function LandingPage() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }

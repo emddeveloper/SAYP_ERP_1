@@ -8,7 +8,7 @@ export function SignupForm() {
 
   return (
     <form
-      className="space-y-6"
+      className="space-y-4 md:space-y-6"
       onSubmit={(e) => e.preventDefault()}
       id="signup"
     >
@@ -17,7 +17,7 @@ export function SignupForm() {
           Full Name
         </label>
         <input
-          className="w-full bg-surface-container border-0 border-b border-outline-variant/50 px-4 py-3 rounded-t-lg text-on-surface placeholder:text-outline-variant/70 focus:outline-none focus:border-b-primary focus:shadow-[0_4px_12px_-2px_rgba(74,225,118,0.2)] transition-all duration-200 text-base"
+          className="w-full rounded-t-lg border-0 border-b border-outline-variant/50 bg-surface-container px-4 py-2.5 text-base text-on-surface placeholder:text-outline-variant/70 transition-all duration-200 focus:border-b-primary focus:shadow-[0_4px_12px_-2px_rgba(74,225,118,0.2)] focus:outline-none md:py-3"
           placeholder="John Doe"
           type="text"
         />
@@ -32,7 +32,7 @@ export function SignupForm() {
             <MailIcon />
           </span>
           <input
-            className="w-full bg-surface-container border-0 border-b border-outline-variant/50 pl-11 pr-4 py-3 rounded-t-lg text-on-surface placeholder:text-outline-variant/70 focus:outline-none focus:border-b-primary focus:shadow-[0_4px_12px_-2px_rgba(74,225,118,0.2)] transition-all duration-200 text-base"
+            className="w-full rounded-t-lg border-0 border-b border-outline-variant/50 bg-surface-container py-2.5 pl-11 pr-4 text-base text-on-surface placeholder:text-outline-variant/70 transition-all duration-200 focus:border-b-primary focus:shadow-[0_4px_12px_-2px_rgba(74,225,118,0.2)] focus:outline-none md:py-3"
             placeholder="name@company.com"
             type="email"
           />
@@ -48,7 +48,7 @@ export function SignupForm() {
             <LockIcon />
           </span>
           <input
-            className="w-full bg-surface-container border-0 border-b border-outline-variant/50 pl-11 pr-12 py-3 rounded-t-lg text-on-surface placeholder:text-outline-variant/70 focus:outline-none focus:border-b-primary focus:shadow-[0_4px_12px_-2px_rgba(74,225,118,0.2)] transition-all duration-200 text-base"
+            className="w-full rounded-t-lg border-0 border-b border-outline-variant/50 bg-surface-container py-2.5 pl-11 pr-12 text-base text-on-surface placeholder:text-outline-variant/70 transition-all duration-200 focus:border-b-primary focus:shadow-[0_4px_12px_-2px_rgba(74,225,118,0.2)] focus:outline-none md:py-3"
             placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"
             type={showPassword ? "text" : "password"}
           />
@@ -62,10 +62,10 @@ export function SignupForm() {
         </div>
       </div>
 
-      <div className="pt-4">
+      <div className="pt-1 md:pt-4">
         <button
           type="submit"
-          className="w-full bg-primary text-on-primary py-4 rounded-lg text-sm font-bold shadow-[0_0_20px_rgba(74,225,118,0.4)] hover:brightness-110 active:scale-[0.98] transition-all duration-200"
+          className="w-full rounded-lg bg-primary py-3 text-sm font-bold text-on-primary shadow-[0_0_20px_rgba(74,225,118,0.4)] transition-all duration-200 hover:brightness-110 active:scale-[0.98] md:py-4"
         >
           Create Account
         </button>

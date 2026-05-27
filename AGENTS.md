@@ -60,7 +60,8 @@ SaaS dashboard for solar companies to manage projects, customers, and analytics.
 - `constants/index.ts` holds app-wide constants (`APP_NAME`, `DASHBOARD_NAV`). Nav items include an
   optional `icon` key mapped via `NAV_ICON_MAP` in `components/dashboard/nav-icons.tsx`.
 - `types/index.ts` holds shared TypeScript interfaces (`User`, `NavItem`, `DashboardStats`).
-- Landing page at `/` is a dark-themed signup page with a fixed navbar, hero section, and footer.
+- Landing page at `/` is a dark-themed signup page with a viewport-locked `h-dvh` shell (no page
+  scrolling), compact mobile spacing, and in-flow navbar/footer bars plus a hero center section.
   Components are under `components/landing/`. Icons are inline SVGs in `icons.tsx` (no icon library
   dependency yet).
 - Login page at `/login` is a full-screen centered card with cinematic background, particles, and
@@ -83,4 +84,3 @@ SaaS dashboard for solar companies to manage projects, customers, and analytics.
 | `constants/`           | App-wide constants                           |
 | `db/`                  | Database layer (not implemented yet)         |
 | `public/`              | Static assets                                |
-

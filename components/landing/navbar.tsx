@@ -2,22 +2,22 @@ import Link from "next/link"
 
 export function Navbar() {
   return (
-    <header className="fixed top-0 left-0 z-50 flex h-20 w-full items-center justify-between bg-surface/80 backdrop-blur-xl border-b border-outline-variant/50 px-4 md:px-12 shadow-sm">
+    <header className="z-40 flex h-14 w-full shrink-0 items-center justify-between border-b border-outline-variant/50 bg-surface/80 px-3 shadow-sm backdrop-blur-xl sm:px-4 md:h-20 md:px-12">
       <div className="flex items-center gap-2">
-        <span className="text-2xl font-bold tracking-tight text-primary">
+        <span className="text-lg font-bold tracking-tight text-primary sm:text-xl md:text-2xl">
           SOLAR CRM
         </span>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-3 md:gap-4">
         <Link
           href="/login"
-          className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors duration-200"
+          className="text-xs font-medium text-on-surface-variant transition-colors duration-200 hover:text-primary sm:text-sm"
         >
           Log In
         </Link>
         <Link
           href="#signup"
-          className="bg-primary text-on-primary px-6 py-2 rounded-lg text-sm font-bold hover:opacity-80 transition-all duration-200 shadow-sm"
+          className="rounded-lg bg-primary px-4 py-1.5 text-xs font-bold text-on-primary shadow-sm transition-all duration-200 hover:opacity-80 sm:px-5 sm:py-2 sm:text-sm md:px-6"
         >
           Sign Up
         </Link>
